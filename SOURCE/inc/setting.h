@@ -21,7 +21,7 @@
 #define HW_BUILD                         "0.06"      // "0.06" 0x302E3036
 #define SW_BUILD                         "1.00"      // "1.00" 0x312E3033
 #define STATUS                           'D'         // 0x44 -default "D",
-#define DEVICE_TYPE                      0x02        // Device type  0x00 = Core, 0x01 = Water, 0x02 = Power/Timer start,0x03 = SW
+#define DEVICE_TYPE                      0x02        // Device type  0x00 = Core, 0x01 = Water, 0x02 = Power/Timer start, 0x03 = SW
 #define DEVICE_NUMBER                    0x00        // Device number
 #define RTC_CALIBRATION                  0x00        // RTC CalibrationPpm
 #define LCD_ROTATION                     0x09        // 0x27 Rotation_270, 0x18 Rotation_180, 0x09 Rotation_90, 0x00 Rotation_0

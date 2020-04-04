@@ -152,6 +152,7 @@ void ReadConfig(void){
 
 void TIM3_IRQHandler(void){
   TIM3->SR &= ~TIM_SR_UIF;
+  LED_ON;
   S6D0129_CS_LOW;
   switch(settings.guiSwich){
     case 0x01: GuiUpdateTimer();
@@ -166,7 +167,6 @@ void TIM3_IRQHandler(void){
     break;
   }
   S6D0129_CS_HIGHT;
-  LED_ON;
   En485ReadPower();
   if(settings.start == 0x01){
     if(settings.swich == 0x00){
@@ -184,7 +184,6 @@ void TimerInit(void){
   TIM3->PSC = 0x1F3F; // 7999 80000000:8000=10000Hz
 //  TIM3->ARR = 0x03E7; // 10Hz
   TIM3->ARR = 0x07CF; // 5Hz
-//  TIM3->ARR = 0x59CF;
   TIM3->SR = 0x00;
   TIM3->DIER |= TIM_DIER_UIE;
   TIM3->CR1 = TIM_CR1_CEN | TIM_CR1_ARPE;

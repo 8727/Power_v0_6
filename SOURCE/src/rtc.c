@@ -6,10 +6,6 @@ void RTC_IRQHandler(void){
     if(0x00 != ds18b20Device) Ds18b20Read();
     if(settings.start < 0x02) TimerUpdate();
     settings.uptime++;
-//    #if defined DEBUG_RTC
-//      RtcTimeStamp();
-//      printf("\r\n");
-//    #endif
   }
 }
 

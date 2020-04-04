@@ -184,6 +184,7 @@ void TimerInit(void){
   TIM3->PSC = 0x1F3F; // 7999 80000000:8000=10000Hz
 //  TIM3->ARR = 0x03E7; // 10Hz
   TIM3->ARR = 0x07CF; // 5Hz
+//  TIM3->ARR = 0x59CF;
   TIM3->SR = 0x00;
   TIM3->DIER |= TIM_DIER_UIE;
   TIM3->CR1 = TIM_CR1_CEN | TIM_CR1_ARPE;
